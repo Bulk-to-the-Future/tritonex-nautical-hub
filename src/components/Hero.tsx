@@ -32,14 +32,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-5 py-2 mb-8 animate-fade-up opacity-0">
-            <Ship className="h-4 w-4 text-primary-foreground" />
-            <span className="text-primary-foreground text-sm font-medium tracking-wide">
-              DPIIT Recognized Startup
-            </span>
-          </div>
-
           {/* Headline */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0 animation-delay-100">
             Engineering Excellence{" "}
