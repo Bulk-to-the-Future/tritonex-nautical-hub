@@ -1,4 +1,4 @@
-import { ChevronDown, Ship, Compass, Waves } from "lucide-react";
+import { ChevronDown, Ship, Compass, Waves, Award, BadgeCheck, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-shipyard.jpg";
 
@@ -71,10 +71,48 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Trust Bar */}
+      <div className="absolute bottom-20 left-0 right-0 z-10">
+        <div className="container mx-auto px-4">
+          <div className="bg-card/20 backdrop-blur-md rounded-xl border border-primary-foreground/10 py-4 px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              <div className="flex items-center gap-3">
+                <Award className="h-6 w-6 text-accent flex-shrink-0" />
+                <div>
+                  <span className="text-primary-foreground/60 text-[10px] uppercase tracking-widest block">Recognized By</span>
+                  <span className="text-primary-foreground font-semibold text-sm">MSME</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <BadgeCheck className="h-6 w-6 text-accent flex-shrink-0" />
+                <div>
+                  <span className="text-primary-foreground/60 text-[10px] uppercase tracking-widest block">Certified</span>
+                  <span className="text-primary-foreground font-semibold text-sm">Startup India (DPIIT)</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Building2 className="h-6 w-6 text-accent flex-shrink-0" />
+                <div>
+                  <span className="text-primary-foreground/60 text-[10px] uppercase tracking-widest block">Infrastructure Partner</span>
+                  <span className="text-primary-foreground font-semibold text-sm">Yojaka India Pvt Ltd</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Ship className="h-6 w-6 text-accent flex-shrink-0" />
+                <div>
+                  <span className="text-primary-foreground/60 text-[10px] uppercase tracking-widest block">Key Client</span>
+                  <span className="text-primary-foreground font-semibold text-sm">Udupi & Cochin Shipyard</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Scroll Indicator */}
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-primary-foreground/60 hover:text-primary-foreground transition-colors animate-fade-in opacity-0 animation-delay-500"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center text-primary-foreground/60 hover:text-primary-foreground transition-colors animate-fade-in opacity-0 animation-delay-500"
       >
         <span className="text-xs tracking-widest uppercase mb-2">Discover</span>
         <ChevronDown className="h-5 w-5 animate-bounce" />
