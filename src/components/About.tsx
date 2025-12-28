@@ -27,12 +27,12 @@ const About = () => {
 
   return (
     <section id="about" className="py-24 bg-background relative overflow-hidden">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Subtle Anchor Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M40 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-1 8v6h-8v2h8v18.5l-12 8v3l12-8v6.5h-6v2h14v-2h-6v-6.5l12 8v-3l-12-8V30h8v-2h-8v-6h2z'/%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
       </div>
