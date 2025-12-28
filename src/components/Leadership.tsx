@@ -1,4 +1,4 @@
-import { User } from "lucide-react";
+import leaderPlaceholder from "@/assets/leader-placeholder.png";
 
 const leaders = [
   {
@@ -37,8 +37,12 @@ const Leadership = () => {
               key={index}
               className="bg-card rounded-xl overflow-hidden shadow-elegant border border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-[4/5] bg-muted flex items-center justify-center">
-                <User className="w-24 h-24 text-muted-foreground/50" />
+              <div className="aspect-[4/5] overflow-hidden">
+                <img 
+                  src={leaderPlaceholder} 
+                  alt={leader.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6 text-center">
                 <span className="text-gold text-sm font-medium tracking-wide uppercase">
