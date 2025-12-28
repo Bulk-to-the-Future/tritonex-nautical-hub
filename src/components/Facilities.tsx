@@ -71,18 +71,18 @@ const Facilities = () => {
             {facilities.map((facility, index) => (
               <div
                 key={facility.label}
-                className="bg-card p-6 rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 group"
+                className="bg-primary p-6 rounded-xl hover:bg-primary/90 transition-all duration-300 group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
                   <facility.icon className="h-6 w-6 text-accent" />
                 </div>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-display text-3xl font-bold text-foreground">{facility.stat}</span>
-                  {facility.unit && <span className="text-muted-foreground text-sm">{facility.unit}</span>}
+                  <span className="font-display text-3xl font-bold text-primary-foreground">{facility.stat}</span>
+                  {facility.unit && <span className="text-primary-foreground/70 text-sm">{facility.unit}</span>}
                 </div>
-                <h3 className="font-medium text-foreground mb-2">{facility.label}</h3>
-                <p className="text-sm text-muted-foreground">{facility.description}</p>
+                <h3 className="font-medium text-primary-foreground mb-2">{facility.label}</h3>
+                <p className="text-sm text-primary-foreground/80">{facility.description}</p>
               </div>
             ))}
           </div>
