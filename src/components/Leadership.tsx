@@ -14,7 +14,7 @@ const leaders = [
   {
     title: "Chief Operating Officer",
     name: "TP Jayakumar",
-    description: "A seasoned marine Chief Engineer with over 36 years of experience in the industry - a combination of 17 years of sailing experience and more than 19 years in senior shipyard leadership roles across India and overseas. With extensive expertise in ship operations, construction, repair and modernization, he has successfully led ship-building projects, vessel deliveries and rig refits with exceptional efficiency and precision. He combines deep technical expertise with strategic foresight to be a visionary industry leader, focused on driving innovation, operational excellence and sustainable growth in the maritime sector.",
+    description: "Highly accomplished Marine Engineer with over four decades of expertise in ship repair, shipbuilding and offshore projects. His career encompasses leadership on FPSOs, gas carriers, tankers and LNG vessels, while spearheading facility development and process optimization initiatives that enhanced operational efficiency, safety and productivity across shipyards.",
   },
 ];
 
