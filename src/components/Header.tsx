@@ -16,17 +16,15 @@ const Header = () => {
 
   const navLinks = [
     { href: "#about", label: "About" },
-    { href: "#mission", label: "Mission & Vision" },
     { href: "#services", label: "Services" },
     { href: "#facilities", label: "Facilities" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-elegant py-4"
-          : "bg-transparent py-6"
+        isScrolled ? "bg-card/95 backdrop-blur-md shadow-elegant py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -35,20 +33,18 @@ const Header = () => {
           <a href="#" className="flex items-center gap-3 group">
             <div
               className={`p-2 rounded-lg transition-all duration-300 ${
-                isScrolled
-                  ? "bg-primary"
-                  : "bg-primary-foreground/10 backdrop-blur-sm"
+                isScrolled ? "bg-primary" : "bg-primary-foreground/10 backdrop-blur-sm"
               }`}
             >
               <Anchor
-                className={`h-8 w-8 transition-colors ${
+                className={`h-6 w-6 transition-colors ${
                   isScrolled ? "text-primary-foreground" : "text-primary-foreground"
                 }`}
               />
             </div>
             <div>
               <span
-                className={`font-display text-2xl font-bold tracking-tight transition-colors ${
+                className={`font-display text-xl font-bold tracking-tight transition-colors ${
                   isScrolled ? "text-foreground" : "text-primary-foreground"
                 }`}
               >
@@ -70,7 +66,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-base font-semibold tracking-wide transition-all duration-300 hover:opacity-100 ${
+                className={`text-sm font-medium tracking-wide transition-all duration-300 hover:opacity-100 ${
                   isScrolled
                     ? "text-foreground/80 hover:text-accent"
                     : "text-primary-foreground/90 hover:text-primary-foreground"
@@ -79,33 +75,17 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <Button
-              variant={isScrolled ? "default" : "hero"}
-              size="sm"
-              className="ml-4"
-              asChild
-            >
-              <a href="#contact">Get In Touch</a>
+            <Button variant={isScrolled ? "default" : "hero"} size="sm" className="ml-4" asChild>
+              <a href="#contact">Contact</a>
             </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
+          <button className="lg:hidden p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
-              <X
-                className={`h-6 w-6 ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              />
+              <X className={`h-6 w-6 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`} />
             ) : (
-              <Menu
-                className={`h-6 w-6 ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              />
+              <Menu className={`h-6 w-6 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`} />
             )}
           </button>
         </div>
