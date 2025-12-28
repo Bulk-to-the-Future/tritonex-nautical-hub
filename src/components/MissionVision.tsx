@@ -15,7 +15,7 @@ const MissionVision = () => {
         </div>
 
         {/* Mission and Vision Cards */}
-        <div className="max-w-3xl mx-auto flex flex-col gap-8">
+        <div className="max-w-5xl mx-auto flex flex-col gap-8">
           {/* Mission */}
           <div className="bg-background p-8 rounded-xl shadow-lg">
             <div className="flex items-center gap-4 mb-6">
