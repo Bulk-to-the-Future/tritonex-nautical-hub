@@ -1,5 +1,3 @@
-import { Compass, Eye } from "lucide-react";
-
 const MissionVision = () => {
   return (
     <section id="mission" className="py-24 bg-primary">
@@ -18,14 +16,9 @@ const MissionVision = () => {
         <div className="max-w-5xl mx-auto flex flex-col gap-8">
           {/* Mission */}
           <div className="bg-background p-8 rounded-xl shadow-lg">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center">
-                <Compass className="h-7 w-7 text-accent" />
-              </div>
-              <h3 className="font-display text-2xl font-bold text-foreground">
-                Our Mission
-              </h3>
-            </div>
+            <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+              Our Mission
+            </h3>
             <p className="text-muted-foreground leading-relaxed">
               To provide world-class shipbuilding and marine solutions through effective project 
               management, process optimization and continuous modernization. By integrating 
@@ -37,14 +30,9 @@ const MissionVision = () => {
 
           {/* Vision */}
           <div className="bg-background p-8 rounded-xl shadow-lg">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center">
-                <Eye className="h-7 w-7 text-accent" />
-              </div>
-              <h3 className="font-display text-2xl font-bold text-foreground">
-                Our Vision
-              </h3>
-            </div>
+            <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+              Our Vision
+            </h3>
             <p className="text-muted-foreground leading-relaxed">
               To position India as a global powerhouse in shipbuilding and marine solutions, 
               in line with our Prime Minister's vision, by harnessing our expertise across 
