@@ -69,20 +69,6 @@ const About = () => {
               Our partnerships with leading industry bodies and certification agencies ensure that every project meets
               the highest international standards for quality, safety, and environmental compliance.
             </p>
-
-            {/* Partners */}
-            <div className="pt-6">
-              <span className="text-xs tracking-widest uppercase text-muted-foreground block mb-4">
-                Certifications & Partners
-              </span>
-              <div className="bg-card rounded-lg p-4 shadow-card">
-                <img
-                  src={partnersLogo}
-                  alt="Industry certifications and partnership logos"
-                  className="w-full h-auto max-h-20 object-contain"
-                />
-              </div>
-            </div>
           </div>
 
           {/* Values Grid */}
