@@ -3,18 +3,18 @@ import leaderPlaceholder from "@/assets/leader-placeholder.png";
 const leaders = [
   {
     title: "Chief Executive Officer",
-    name: "John Smith",
-    description: "With over 25 years of experience in maritime industries, leading strategic vision and growth initiatives across global operations.",
+    name: "Pavithran Alokkan",
+    description: "A seasoned marine Chief Engineer with over 36 years of experience in the industry - a combination of 17 years of sailing experience and more than 19 years in senior shipyard leadership roles across India and overseas. With extensive expertise in ship operations, construction, repair and modernization, he has successfully led ship-building projects, vessel deliveries and rig refits with exceptional efficiency and precision. He combines deep technical expertise with strategic foresight to be a visionary industry leader, focused on driving innovation, operational excellence and sustainable growth in the maritime sector.",
   },
   {
-    title: "Chief Technological Officer",
-    name: "Sarah Johnson",
-    description: "A visionary technologist driving innovation in shipbuilding processes, digital transformation, and sustainable engineering solutions.",
+    title: "Chief Technical Officer",
+    name: "Dhanasamy S",
+    description: "A seasoned marine Chief Engineer with over 36 years of experience in the industry - a combination of 17 years of sailing experience and more than 19 years in senior shipyard leadership roles across India and overseas. With extensive expertise in ship operations, construction, repair and modernization, he has successfully led ship-building projects, vessel deliveries and rig refits with exceptional efficiency and precision. He combines deep technical expertise with strategic foresight to be a visionary industry leader, focused on driving innovation, operational excellence and sustainable growth in the maritime sector.",
   },
   {
     title: "Chief Operating Officer",
-    name: "Michael Chen",
-    description: "Expert in operational excellence, overseeing day-to-day operations and ensuring seamless project delivery across all facilities.",
+    name: "TP Jayakumar",
+    description: "A seasoned marine Chief Engineer with over 36 years of experience in the industry - a combination of 17 years of sailing experience and more than 19 years in senior shipyard leadership roles across India and overseas. With extensive expertise in ship operations, construction, repair and modernization, he has successfully led ship-building projects, vessel deliveries and rig refits with exceptional efficiency and precision. He combines deep technical expertise with strategic foresight to be a visionary industry leader, focused on driving innovation, operational excellence and sustainable growth in the maritime sector.",
   },
 ];
 
