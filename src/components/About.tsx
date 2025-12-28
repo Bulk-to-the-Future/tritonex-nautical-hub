@@ -46,9 +46,8 @@ const About = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Text Content */}
-          <div className="space-y-6">
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="space-y-6 text-center">
             <p className="text-lg text-muted-foreground leading-relaxed">
               <strong className="text-foreground">Tritonex Marine Solutions LLP</strong> is a DPIIT-recognized startup
               headquartered in Mangaluru, India. We specialize in delivering comprehensive maritime engineering
@@ -65,33 +64,23 @@ const About = () => {
               the highest international standards for quality, safety, and environmental compliance.
             </p>
           </div>
-
-          {/* Values Grid */}
-          <div className="grid grid-cols-2 gap-6">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-                className="bg-card p-6 rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                  <value.icon className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Mission Statement */}
-        <div className="bg-primary rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-4">Our Mission</h3>
-          <p className="text-primary-foreground/80 max-w-3xl mx-auto text-lg leading-relaxed">
-            To be the preferred maritime solutions partner for global shipyards and offshore operators, delivering
-            innovative, reliable, and cost-effective engineering services that drive operational excellence and
-            sustainable growth.
-          </p>
+        {/* Values Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {values.map((value, index) => (
+            <div
+              key={value.title}
+              className="bg-card p-6 rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 group text-center"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-accent/20 transition-colors">
+                <value.icon className="h-6 w-6 text-accent" />
+              </div>
+              <h3 className="font-display text-lg font-semibold text-foreground mb-2">{value.title}</h3>
+              <p className="text-sm text-muted-foreground">{value.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
