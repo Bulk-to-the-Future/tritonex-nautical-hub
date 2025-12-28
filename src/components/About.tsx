@@ -67,22 +67,18 @@ const About = () => {
         </div>
 
         {/* Values Row */}
-        <div className="bg-primary rounded-2xl p-8 md:p-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-                className="bg-primary-foreground/10 p-6 rounded-xl hover:bg-primary-foreground/20 transition-all duration-300 group text-center"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-12 h-12 bg-primary-foreground/20 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-primary-foreground/30 transition-colors">
-                  <value.icon className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <h3 className="font-display text-lg font-semibold text-primary-foreground mb-2">{value.title}</h3>
-                <p className="text-sm text-primary-foreground/80">{value.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {values.map((value, index) => (
+            <div
+              key={value.title}
+              className="bg-primary p-6 rounded-xl hover:bg-primary/90 transition-all duration-300 group text-center"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <value.icon className="h-6 w-6 text-accent mb-3 mx-auto group-hover:scale-110 transition-transform" />
+              <h3 className="font-display text-lg font-semibold text-primary-foreground mb-2">{value.title}</h3>
+              <p className="text-sm text-primary-foreground/80">{value.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
