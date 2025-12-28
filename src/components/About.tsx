@@ -1,4 +1,4 @@
-import { Target, Award, Users, Globe, Ship } from "lucide-react";
+import { Target, Award, Users, Globe } from "lucide-react";
 import partnersLogo from "@/assets/partners-logos.jpg";
 
 const About = () => {
@@ -37,12 +37,6 @@ const About = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-5 py-2 mb-6">
-            <Ship className="h-4 w-4 text-accent" />
-            <span className="text-accent text-sm font-medium tracking-wide">
-              DPIIT Recognized Startup
-            </span>
-          </div>
           <span className="block text-accent font-medium tracking-widest uppercase text-sm">
             About Us
           </span>
