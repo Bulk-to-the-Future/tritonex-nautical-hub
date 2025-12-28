@@ -12,11 +12,11 @@ const Index = () => {
     <main className="overflow-hidden">
       <Header />
       <Hero />
+      <TrustBar />
       <About />
       <Services />
       <Facilities />
       <Contact />
-      <TrustBar />
       <Footer />
     </main>
   );
