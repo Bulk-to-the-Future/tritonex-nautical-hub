@@ -242,19 +242,6 @@ const Contact = () => {
                 ))}
               </ul>
             </div>
-
-            {/* Website */}
-            <div className="text-center p-6 bg-card rounded-xl shadow-card">
-              <p className="text-muted-foreground text-sm mb-2">Visit our website</p>
-              <a
-                href="https://www.tritonexmarinesolutions.co.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:text-accent/80 font-medium transition-colors"
-              >
-                www.tritonexmarinesolutions.co.in
-              </a>
-            </div>
           </div>
         </div>
       </div>
