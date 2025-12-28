@@ -25,8 +25,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-elegant py-3"
-          : "bg-transparent py-5"
+          ? "bg-card/95 backdrop-blur-md shadow-elegant py-4"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -41,14 +41,14 @@ const Header = () => {
               }`}
             >
               <Anchor
-                className={`h-6 w-6 transition-colors ${
+                className={`h-8 w-8 transition-colors ${
                   isScrolled ? "text-primary-foreground" : "text-primary-foreground"
                 }`}
               />
             </div>
             <div>
               <span
-                className={`font-display text-xl font-bold tracking-tight transition-colors ${
+                className={`font-display text-2xl font-bold tracking-tight transition-colors ${
                   isScrolled ? "text-foreground" : "text-primary-foreground"
                 }`}
               >
