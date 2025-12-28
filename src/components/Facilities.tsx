@@ -1,5 +1,5 @@
 import { Factory, Ruler, Warehouse, Wrench } from "lucide-react";
-import facilitiesImage from "@/assets/facilities.jpg";
+import IndiaMap from "./IndiaMap";
 
 const Facilities = () => {
   const facilities = [
@@ -53,24 +53,9 @@ const Facilities = () => {
 
         {/* Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image */}
+          {/* Map */}
           <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-            <img
-              src={facilitiesImage}
-              alt="Tritonex Marine Solutions facility"
-              className="w-full h-auto object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/40 to-transparent" />
-            
-            {/* Overlay Badge */}
-            <div className="absolute bottom-6 left-6 bg-card/90 backdrop-blur-sm rounded-lg p-4 shadow-elegant">
-              <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                Located In
-              </div>
-              <div className="font-display font-semibold text-foreground">
-                Mangaluru, India
-              </div>
-            </div>
+            <IndiaMap />
           </div>
 
           {/* Facilities Stats */}
