@@ -34,14 +34,13 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Headline */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0 animation-delay-100">
-            Engineering Excellence{" "}
-            <span className="block text-ocean-light">for the Maritime Industry</span>
+            Engineering Excellence <span className="block text-ocean-light">for the Maritime Industry</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up opacity-0 animation-delay-200">
-            Delivering world-class shipbuilding, offshore solutions, and yard
-            modernization services to global maritime leaders.
+            Your strategic partner for end-to-end shipbuilding and offshore engineering, driven by technical mastery and
+            operational integrity.
           </p>
 
           {/* CTA Buttons */}
@@ -57,28 +56,16 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-primary-foreground/20 animate-fade-up opacity-0 animation-delay-400">
             <div>
-              <div className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">
-                24,000
-              </div>
-              <div className="text-primary-foreground/60 text-sm mt-1">
-                Sq.m Total Yard
-              </div>
+              <div className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">24,000</div>
+              <div className="text-primary-foreground/60 text-sm mt-1">Sq.m Total Yard</div>
             </div>
             <div>
-              <div className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">
-                2,200
-              </div>
-              <div className="text-primary-foreground/60 text-sm mt-1">
-                Sq.m Covered Shops
-              </div>
+              <div className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">2,200</div>
+              <div className="text-primary-foreground/60 text-sm mt-1">Sq.m Covered Shops</div>
             </div>
             <div>
-              <div className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">
-                6+
-              </div>
-              <div className="text-primary-foreground/60 text-sm mt-1">
-                Core Services
-              </div>
+              <div className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">6+</div>
+              <div className="text-primary-foreground/60 text-sm mt-1">Core Services</div>
             </div>
           </div>
         </div>
