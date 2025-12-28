@@ -67,20 +67,22 @@ const About = () => {
         </div>
 
         {/* Values Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {values.map((value, index) => (
-            <div
-              key={value.title}
-              className="bg-card p-6 rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 group text-center"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-accent/20 transition-colors">
-                <value.icon className="h-6 w-6 text-accent" />
+        <div className="bg-primary rounded-2xl p-8 md:p-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {values.map((value, index) => (
+              <div
+                key={value.title}
+                className="bg-primary-foreground/10 p-6 rounded-xl hover:bg-primary-foreground/20 transition-all duration-300 group text-center"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-12 h-12 bg-primary-foreground/20 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-primary-foreground/30 transition-colors">
+                  <value.icon className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-primary-foreground mb-2">{value.title}</h3>
+                <p className="text-sm text-primary-foreground/80">{value.description}</p>
               </div>
-              <h3 className="font-display text-lg font-semibold text-foreground mb-2">{value.title}</h3>
-              <p className="text-sm text-muted-foreground">{value.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
