@@ -1,4 +1,4 @@
-import { Factory, Ruler, Warehouse, Wrench } from "lucide-react";
+import { Factory, Ruler, Warehouse, Hourglass } from "lucide-react";
 import facilitiesImage from "@/assets/facilities.jpg";
 
 const Facilities = () => {
@@ -25,7 +25,7 @@ const Facilities = () => {
       description: "Full-service dry dock for vessel maintenance and repairs",
     },
     {
-      icon: Wrench,
+      icon: Hourglass,
       stat: "100+",
       unit: "",
       label: "Years of Experience",
