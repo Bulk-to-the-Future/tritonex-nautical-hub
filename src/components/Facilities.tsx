@@ -26,10 +26,10 @@ const Facilities = () => {
     },
     {
       icon: Wrench,
-      stat: "Modern",
+      stat: "100+",
       unit: "",
-      label: "Supply Stores",
-      description: "Well-stocked inventory of parts, materials, and equipment",
+      label: "Years of Experience",
+      description: "Combined experience of the leaders of the organization",
     },
   ];
 
