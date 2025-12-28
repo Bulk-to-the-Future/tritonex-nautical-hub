@@ -1,4 +1,4 @@
-import { ChevronDown, Ship, Compass, Waves, Award, BadgeCheck, Building2 } from "lucide-react";
+import { ChevronDown, Ship, Award, BadgeCheck, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-shipyard.jpg";
 
@@ -14,19 +14,6 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-85" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/50 via-transparent to-transparent" />
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-10 text-primary-foreground/10 animate-float">
-          <Compass className="h-24 w-24" />
-        </div>
-        <div className="absolute bottom-1/3 right-10 text-primary-foreground/10 animate-float animation-delay-300">
-          <Ship className="h-32 w-32" />
-        </div>
-        <div className="absolute top-1/2 left-1/4 text-primary-foreground/5">
-          <Waves className="h-48 w-48" />
-        </div>
       </div>
 
       {/* Content */}
