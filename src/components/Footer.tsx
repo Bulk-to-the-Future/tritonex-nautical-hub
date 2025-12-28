@@ -1,4 +1,4 @@
-import { Anchor, Linkedin, Twitter, Mail } from "lucide-react";
+import { Anchor, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <a href="#" className="flex items-center gap-3 mb-6">
@@ -47,13 +47,6 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-4 w-4" />
               </a>
               <a
                 href="mailto:projects@tritonexmarinesolutions.co.in"
