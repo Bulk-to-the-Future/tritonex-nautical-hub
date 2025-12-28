@@ -1,10 +1,10 @@
-import { ChevronDown, Ship, Compass, Waves } from "lucide-react";
+import { ChevronDown, Ship, Compass, Waves, Award, BadgeCheck, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-shipyard.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -30,7 +30,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 text-center flex-1 flex items-center">
         <div className="max-w-4xl mx-auto">
           {/* Headline */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0 animation-delay-100">
@@ -68,25 +68,31 @@ const Hero = () => {
               <div className="text-primary-foreground/60 text-sm mt-1">Core Services</div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Trust Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12 pt-8 border-t border-primary-foreground/20 animate-fade-up opacity-0 animation-delay-500">
-            <div className="text-center">
-              <span className="text-primary-foreground/50 text-xs uppercase tracking-widest block mb-1">Recognized By</span>
-              <span className="text-primary-foreground font-semibold text-sm">MSME</span>
-            </div>
-            <div className="text-center">
-              <span className="text-primary-foreground/50 text-xs uppercase tracking-widest block mb-1">Certified</span>
-              <span className="text-primary-foreground font-semibold text-sm">Startup India (DPIIT)</span>
-            </div>
-            <div className="text-center">
-              <span className="text-primary-foreground/50 text-xs uppercase tracking-widest block mb-1">Infrastructure Partner</span>
-              <span className="text-primary-foreground font-semibold text-sm">Yojaka India Pvt Ltd</span>
-            </div>
-            <div className="text-center">
-              <span className="text-primary-foreground/50 text-xs uppercase tracking-widest block mb-1">Key Client</span>
-              <span className="text-primary-foreground font-semibold text-sm">Udupi & Cochin Shipyard</span>
-            </div>
+      {/* Trust Bar - positioned above Discover */}
+      <div className="relative z-10 container mx-auto px-4 pb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 pt-8 border-t border-primary-foreground/20 animate-fade-up opacity-0 animation-delay-500">
+          <div className="flex flex-col items-center text-center group">
+            <Award className="h-6 w-6 text-accent mb-2 group-hover:scale-110 transition-transform" />
+            <span className="text-primary-foreground/60 text-xs uppercase tracking-widest mb-1">Recognized By</span>
+            <span className="text-primary-foreground font-bold text-base md:text-lg">MSME</span>
+          </div>
+          <div className="flex flex-col items-center text-center group">
+            <BadgeCheck className="h-6 w-6 text-accent mb-2 group-hover:scale-110 transition-transform" />
+            <span className="text-primary-foreground/60 text-xs uppercase tracking-widest mb-1">Certified</span>
+            <span className="text-primary-foreground font-bold text-base md:text-lg">Startup India (DPIIT)</span>
+          </div>
+          <div className="flex flex-col items-center text-center group">
+            <Building2 className="h-6 w-6 text-accent mb-2 group-hover:scale-110 transition-transform" />
+            <span className="text-primary-foreground/60 text-xs uppercase tracking-widest mb-1">Infrastructure Partner</span>
+            <span className="text-primary-foreground font-bold text-base md:text-lg">Yojaka India Pvt Ltd</span>
+          </div>
+          <div className="flex flex-col items-center text-center group">
+            <Ship className="h-6 w-6 text-accent mb-2 group-hover:scale-110 transition-transform" />
+            <span className="text-primary-foreground/60 text-xs uppercase tracking-widest mb-1">Key Client</span>
+            <span className="text-primary-foreground font-bold text-base md:text-lg">Udupi & Cochin Shipyard</span>
           </div>
         </div>
       </div>
