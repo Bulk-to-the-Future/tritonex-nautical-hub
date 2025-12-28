@@ -35,7 +35,7 @@ const Leadership = () => {
           {leaders.map((leader, index) => (
             <div
               key={index}
-              className="bg-navy rounded-xl overflow-hidden shadow-elegant border border-ocean/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="bg-card rounded-xl overflow-hidden shadow-elegant border border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img 
@@ -48,10 +48,10 @@ const Leadership = () => {
                 <span className="text-gold text-sm font-medium tracking-wide uppercase">
                   {leader.title}
                 </span>
-                <h3 className="text-xl font-display font-bold text-white mt-2">
+                <h3 className="text-xl font-display font-bold text-foreground mt-2">
                   {leader.name}
                 </h3>
-                <p className="text-steel mt-3 text-sm leading-relaxed">
+                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
                   {leader.description}
                 </p>
               </div>
