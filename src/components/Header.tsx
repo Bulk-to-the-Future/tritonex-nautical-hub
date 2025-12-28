@@ -70,7 +70,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide transition-all duration-300 hover:opacity-100 ${
+                className={`text-base font-semibold tracking-wide transition-all duration-300 hover:opacity-100 ${
                   isScrolled
                     ? "text-foreground/80 hover:text-accent"
                     : "text-primary-foreground/90 hover:text-primary-foreground"
