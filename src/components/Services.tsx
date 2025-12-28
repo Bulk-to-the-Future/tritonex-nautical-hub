@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import serviceShipbuilding from "@/assets/service-shipbuilding.jpg";
 import serviceProjectManagement from "@/assets/service-project-management.jpg";
 import serviceYardModernization from "@/assets/service-yard-modernization.jpg";
@@ -113,39 +111,6 @@ const Services = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Piping Work Highlight */}
-        <div className="mt-16 bg-primary rounded-2xl overflow-hidden">
-          <div className="grid lg:grid-cols-2 items-center">
-            <div className="p-8 md:p-12">
-              <span className="text-ocean-light font-medium tracking-widest uppercase text-sm">
-                Specialized Service
-              </span>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mt-2 mb-4">
-                Piping Turnkey Work
-              </h3>
-              <p className="text-primary-foreground/80 leading-relaxed mb-6">
-                Complete piping solutions for shipbuilding and offshore projects, including
-                design, fabrication, installation, and testing. Our experienced team delivers
-                high-quality piping systems that meet the most demanding specifications.
-              </p>
-              <Button variant="heroOutline" asChild>
-                <a href="#contact">
-                  Discuss Your Project
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-            <div className="h-64 lg:h-full relative">
-              <img
-                src={serviceShipbuilding}
-                alt="Piping turnkey work for maritime projects"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-transparent to-transparent lg:bg-gradient-to-l" />
-            </div>
-          </div>
         </div>
       </div>
     </section>
