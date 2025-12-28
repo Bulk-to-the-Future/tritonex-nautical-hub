@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Facilities from "@/components/Facilities";
 import Contact from "@/components/Contact";
+import TrustBar from "@/components/TrustBar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
     <main className="overflow-hidden">
       <Header />
       <Hero />
+      <TrustBar />
       <About />
       <Services />
       <Facilities />
