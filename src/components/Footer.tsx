@@ -21,9 +21,9 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div>
             <a href="#" className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-primary-foreground/10 rounded-lg">
                 <Anchor className="h-6 w-6 text-primary-foreground" />
