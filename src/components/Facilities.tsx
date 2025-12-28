@@ -49,13 +49,13 @@ const Facilities = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-elegant">
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant max-h-[420px]">
             <img
               src={facilitiesImage}
               alt="Tritonex Marine Solutions facility"
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/40 to-transparent" />
 
@@ -67,7 +67,7 @@ const Facilities = () => {
           </div>
 
           {/* Facilities Stats */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-8">
             {facilities.map((facility, index) => (
               <div
                 key={facility.label}
