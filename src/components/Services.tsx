@@ -111,17 +111,6 @@ const Services = () => {
                   ))}
                 </ul>
 
-                {/* CTA */}
-                <Button
-                  variant="ghost"
-                  className="justify-start p-0 h-auto text-accent hover:text-accent/80 hover:bg-transparent group/btn"
-                  asChild
-                >
-                  <a href="#contact">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                  </a>
-                </Button>
               </div>
             </div>
           ))}
