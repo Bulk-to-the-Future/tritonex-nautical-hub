@@ -69,101 +69,99 @@ const Contact = () => {
             <h3 className="font-display text-xl font-semibold text-foreground mb-6">
               Send Us a Message
             </h3>
-            <form onSubmit={handleSubmit} className="h-full flex flex-col">
-              <div className="space-y-5 flex-1">
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="name" className="text-sm font-medium text-foreground block mb-2">
-                      Full Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="John Doe"
-                      required
-                      className="bg-background"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="text-sm font-medium text-foreground block mb-2">
-                      Email Address
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="john@company.com"
-                      required
-                      className="bg-background"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="company" className="text-sm font-medium text-foreground block mb-2">
-                      Company
-                    </label>
-                    <Input
-                      id="company"
-                      name="company"
-                      placeholder="Your Company"
-                      className="bg-background"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="text-sm font-medium text-foreground block mb-2">
-                      Phone Number
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="+91 99999 99999"
-                      className="bg-background"
-                    />
-                  </div>
-                </div>
-
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="service" className="text-sm font-medium text-foreground block mb-2">
-                    Service of Interest
+                  <label htmlFor="name" className="text-sm font-medium text-foreground block mb-2">
+                    Full Name
                   </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="shipbuilding">Turnkey Shipbuilding</option>
-                    <option value="project-management">Project Management</option>
-                    <option value="yard-modernization">Yard Modernization</option>
-                    <option value="offshore">Offshore Services</option>
-                    <option value="process">Process Improvements</option>
-                    <option value="spare-parts">Spare Parts Management</option>
-                    <option value="piping">Piping Turnkey Work</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="text-sm font-medium text-foreground block mb-2">
-                    Project Details
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell us about your project requirements..."
-                    rows={4}
+                  <Input
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
                     required
-                    className="bg-background resize-none"
+                    className="bg-background"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="text-sm font-medium text-foreground block mb-2">
+                    Email Address
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="john@company.com"
+                    required
+                    className="bg-background"
                   />
                 </div>
               </div>
 
+              <div className="grid md:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="company" className="text-sm font-medium text-foreground block mb-2">
+                    Company
+                  </label>
+                  <Input
+                    id="company"
+                    name="company"
+                    placeholder="Your Company"
+                    className="bg-background"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="text-sm font-medium text-foreground block mb-2">
+                    Phone Number
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+91 99999 99999"
+                    className="bg-background"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="service" className="text-sm font-medium text-foreground block mb-2">
+                  Service of Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                >
+                  <option value="">Select a service</option>
+                  <option value="shipbuilding">Turnkey Shipbuilding</option>
+                  <option value="project-management">Project Management</option>
+                  <option value="yard-modernization">Yard Modernization</option>
+                  <option value="offshore">Offshore Services</option>
+                  <option value="process">Process Improvements</option>
+                  <option value="spare-parts">Spare Parts Management</option>
+                  <option value="piping">Piping Turnkey Work</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="text-sm font-medium text-foreground block mb-2">
+                  Project Details
+                </label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your project requirements..."
+                  rows={4}
+                  required
+                  className="bg-background resize-none"
+                />
+              </div>
+
               <Button
                 type="submit"
-                className="w-full mt-6"
+                className="w-full"
                 size="lg"
                 disabled={isSubmitting}
               >
@@ -198,7 +196,7 @@ const Contact = () => {
                     {info.href ? (
                       <a
                         href={info.href}
-                        className="text-muted-foreground hover:text-accent transition-colors text-sm"
+                        className="text-muted-foreground hover:text-accent transition-colors"
                       >
                         {info.value}
                       </a>
