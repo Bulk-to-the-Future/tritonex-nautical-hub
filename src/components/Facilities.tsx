@@ -49,9 +49,9 @@ const Facilities = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-elegant max-h-[420px]">
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant">
             <img
               src={facilitiesImage}
               alt="Tritonex Marine Solutions facility"
