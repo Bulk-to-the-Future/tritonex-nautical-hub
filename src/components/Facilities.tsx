@@ -1,4 +1,4 @@
-import { Factory, Ruler, Warehouse, Hourglass } from "lucide-react";
+import { Factory, Ruler, Warehouse, Hourglass, Cog, ShieldCheck, Clock } from "lucide-react";
 import facilitiesImage from "@/assets/facilities.jpg";
 
 const Facilities = () => {
@@ -89,22 +89,25 @@ const Facilities = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
-          <div className="p-6">
-            <h4 className="font-display text-lg font-semibold text-foreground mb-2">Modern Equipment</h4>
-            <p className="text-sm text-muted-foreground">
+        <div className="mt-16 grid grid-cols-3 gap-4 md:gap-6">
+          <div className="bg-primary p-6 rounded-xl hover:bg-primary/90 transition-all duration-300 group text-center">
+            <Cog className="h-6 w-6 text-accent mb-3 mx-auto group-hover:scale-110 transition-transform" />
+            <h4 className="font-display text-lg font-semibold text-primary-foreground mb-2">Modern Equipment</h4>
+            <p className="text-sm text-primary-foreground/80">
               Cutting-edge machinery and tools for precision engineering and fabrication work
             </p>
           </div>
-          <div className="p-6">
-            <h4 className="font-display text-lg font-semibold text-foreground mb-2">Safety Certified</h4>
-            <p className="text-sm text-muted-foreground">
+          <div className="bg-primary p-6 rounded-xl hover:bg-primary/90 transition-all duration-300 group text-center">
+            <ShieldCheck className="h-6 w-6 text-accent mb-3 mx-auto group-hover:scale-110 transition-transform" />
+            <h4 className="font-display text-lg font-semibold text-primary-foreground mb-2">Safety Certified</h4>
+            <p className="text-sm text-primary-foreground/80">
               All facilities meet international safety standards and undergo regular audits
             </p>
           </div>
-          <div className="p-6">
-            <h4 className="font-display text-lg font-semibold text-foreground mb-2">24/7 Operations</h4>
-            <p className="text-sm text-muted-foreground">
+          <div className="bg-primary p-6 rounded-xl hover:bg-primary/90 transition-all duration-300 group text-center">
+            <Clock className="h-6 w-6 text-accent mb-3 mx-auto group-hover:scale-110 transition-transform" />
+            <h4 className="font-display text-lg font-semibold text-primary-foreground mb-2">24/7 Operations</h4>
+            <p className="text-sm text-primary-foreground/80">
               Round-the-clock capability to meet urgent project timelines and deadlines
             </p>
           </div>
