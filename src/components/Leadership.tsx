@@ -23,7 +23,7 @@ const Leadership = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-gold font-medium tracking-widest uppercase text-sm">
+          <span className="text-accent font-medium tracking-widest uppercase text-sm">
             Our Team
           </span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-2">
@@ -45,7 +45,7 @@ const Leadership = () => {
                 />
               </div>
               <div className="p-6 text-center">
-                <span className="text-gold text-sm font-medium tracking-wide uppercase">
+                <span className="text-accent text-sm font-medium tracking-wide uppercase">
                   {leader.title}
                 </span>
                 <h3 className="text-xl font-display font-bold text-foreground mt-2">
