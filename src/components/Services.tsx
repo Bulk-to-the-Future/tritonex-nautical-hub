@@ -76,7 +76,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500 flex flex-col"
+              className="group bg-primary rounded-xl overflow-hidden hover:bg-primary/90 transition-all duration-500 flex flex-col"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Image */}
@@ -86,7 +86,7 @@ const Services = () => {
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
                 <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold text-primary-foreground">
                   {service.title}
                 </h3>
@@ -94,23 +94,22 @@ const Services = () => {
 
               {/* Content */}
               <div className="p-6 flex-1 flex flex-col">
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 flex-1">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <ul className="space-y-2 mb-4">
+                <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-center gap-2 text-sm text-foreground"
+                      className="flex items-center gap-2 text-sm text-primary-foreground"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-
               </div>
             </div>
           ))}
