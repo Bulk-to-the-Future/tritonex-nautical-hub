@@ -17,16 +17,16 @@ const MissionVision = () => {
         {/* Mission and Vision Cards */}
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           {/* Mission */}
-          <div className="bg-primary-foreground/10 p-8 rounded-xl">
+          <div className="bg-background p-8 rounded-xl shadow-lg">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center">
                 <Compass className="h-7 w-7 text-accent" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-primary-foreground">
+              <h3 className="font-display text-2xl font-bold text-foreground">
                 Our Mission
               </h3>
             </div>
-            <p className="text-primary-foreground/90 leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               To provide world-class shipbuilding and marine solutions through effective project 
               management, process optimization and continuous modernization. By integrating 
               operational efficiency, upholding integrity and ensuring timely execution with 
@@ -36,16 +36,16 @@ const MissionVision = () => {
           </div>
 
           {/* Vision */}
-          <div className="bg-primary-foreground/10 p-8 rounded-xl">
+          <div className="bg-background p-8 rounded-xl shadow-lg">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center">
                 <Eye className="h-7 w-7 text-accent" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-primary-foreground">
+              <h3 className="font-display text-2xl font-bold text-foreground">
                 Our Vision
               </h3>
             </div>
-            <p className="text-primary-foreground/90 leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               To position India as a global powerhouse in shipbuilding and marine solutions, 
               in line with our Prime Minister's vision, by harnessing our expertise across 
               domestic and international shipyards and maritime operations. We aim to lead 
