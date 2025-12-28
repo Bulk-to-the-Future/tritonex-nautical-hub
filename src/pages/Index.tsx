@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Facilities from "@/components/Facilities";
 import Contact from "@/components/Contact";
+import TrustBar from "@/components/TrustBar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <Services />
       <Facilities />
       <Contact />
+      <TrustBar />
       <Footer />
     </main>
   );
