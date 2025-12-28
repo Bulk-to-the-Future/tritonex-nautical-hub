@@ -196,7 +196,7 @@ const Contact = () => {
                     {info.href ? (
                       <a
                         href={info.href}
-                        className="text-muted-foreground hover:text-accent transition-colors"
+                        className="text-muted-foreground hover:text-accent transition-colors text-sm"
                       >
                         {info.value}
                       </a>
