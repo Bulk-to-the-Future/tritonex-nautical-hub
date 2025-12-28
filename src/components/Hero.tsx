@@ -68,6 +68,26 @@ const Hero = () => {
               <div className="text-primary-foreground/60 text-sm mt-1">Core Services</div>
             </div>
           </div>
+
+          {/* Trust Bar */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12 pt-8 border-t border-primary-foreground/20 animate-fade-up opacity-0 animation-delay-500">
+            <div className="text-center">
+              <span className="text-primary-foreground/50 text-xs uppercase tracking-widest block mb-1">Recognized By</span>
+              <span className="text-primary-foreground font-semibold text-sm">MSME</span>
+            </div>
+            <div className="text-center">
+              <span className="text-primary-foreground/50 text-xs uppercase tracking-widest block mb-1">Certified</span>
+              <span className="text-primary-foreground font-semibold text-sm">Startup India (DPIIT)</span>
+            </div>
+            <div className="text-center">
+              <span className="text-primary-foreground/50 text-xs uppercase tracking-widest block mb-1">Infrastructure Partner</span>
+              <span className="text-primary-foreground font-semibold text-sm">Yojaka India Pvt Ltd</span>
+            </div>
+            <div className="text-center">
+              <span className="text-primary-foreground/50 text-xs uppercase tracking-widest block mb-1">Key Client</span>
+              <span className="text-primary-foreground font-semibold text-sm">Udupi & Cochin Shipyard</span>
+            </div>
+          </div>
         </div>
       </div>
 
