@@ -1,17 +1,22 @@
 import leaderPlaceholder from "@/assets/leader-placeholder.png";
+import leaderCeo from "@/assets/leader-ceo.jpg";
+import leaderCoo from "@/assets/leader-coo.jpg";
 
 const leaders = [
   {
     title: "Chief Executive Officer",
     name: "Pavithran Alokkan",
+    image: leaderCeo,
   },
   {
     title: "Chief Technical Officer",
     name: "Dhanasamy S",
+    image: leaderPlaceholder,
   },
   {
     title: "Chief Operating Officer",
     name: "TP Jayakumar",
+    image: leaderCoo,
   },
 ];
 
@@ -34,12 +39,14 @@ const Leadership = () => {
               key={index}
               className="bg-card rounded-xl overflow-hidden shadow-elegant border border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img 
-                  src={leaderPlaceholder} 
-                  alt={leader.name}
-                  className="w-full h-full object-cover"
-                />
+              <div className="flex justify-center pt-6">
+                <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent/20">
+                  <img 
+                    src={leader.image} 
+                    alt={leader.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="p-6 text-center">
                 <span className="text-accent text-sm font-medium tracking-wide uppercase">
