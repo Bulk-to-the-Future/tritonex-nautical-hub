@@ -73,13 +73,15 @@ const Hero = () => {
           </div>
           <div className="flex flex-col items-center text-center group">
             <Building2 className="h-6 w-6 text-accent mb-2 group-hover:scale-110 transition-transform" />
-            <span className="text-primary-foreground/60 text-xs uppercase tracking-widest mb-1">Infrastructure Partner</span>
+            <span className="text-primary-foreground/60 text-xs uppercase tracking-widest mb-1">
+              Infrastructure Partner
+            </span>
             <span className="text-primary-foreground font-bold text-base md:text-lg">Yojaka India Pvt Ltd</span>
           </div>
           <div className="flex flex-col items-center text-center group">
             <Ship className="h-6 w-6 text-accent mb-2 group-hover:scale-110 transition-transform" />
             <span className="text-primary-foreground/60 text-xs uppercase tracking-widest mb-1">Key Client</span>
-            <span className="text-primary-foreground font-bold text-base md:text-lg">Udupi & Cochin Shipyard</span>
+            <span className="text-primary-foreground font-bold text-base md:text-lg">Cochin Shipyard</span>
           </div>
         </div>
       </div>
