@@ -1,5 +1,4 @@
 import { Factory, Ruler, Warehouse, Hourglass } from "lucide-react";
-import facilitiesImage from "@/assets/facilities.jpg";
 import mangaloreMap from "@/assets/mangalore-map.jpg";
 
 const Facilities = () => {
@@ -51,30 +50,17 @@ const Facilities = () => {
 
         {/* Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Images Stack */}
-          <div className="space-y-6">
-            {/* Facilities Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-              <img
-                src={facilitiesImage}
-                alt="Tritonex Marine Solutions facility"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/40 to-transparent" />
+          {/* Location Map */}
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant bg-card">
+            <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-elegant z-10">
+              <div className="text-xs text-muted-foreground uppercase tracking-wider">Located In</div>
+              <div className="font-display font-semibold text-foreground">Mangaluru, India</div>
             </div>
-            
-            {/* Location Map */}
-            <div className="relative rounded-2xl overflow-hidden shadow-elegant bg-card">
-              <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-elegant z-10">
-                <div className="text-xs text-muted-foreground uppercase tracking-wider">Located In</div>
-                <div className="font-display font-semibold text-foreground">Mangaluru, India</div>
-              </div>
-              <img
-                src={mangaloreMap}
-                alt="Map showing Mangalore location in India"
-                className="w-full h-64 object-cover"
-              />
-            </div>
+            <img
+              src={mangaloreMap}
+              alt="Map showing Mangalore location in India"
+              className="w-full h-80 object-cover"
+            />
           </div>
 
           {/* Facilities Stats */}
