@@ -1,4 +1,4 @@
-import mangaluruMap from "@/assets/mangaluru.png";
+import mangaluruMap from "@/assets/mangalore-map.jpg";
 
 const IndiaMap = () => {
   return (
