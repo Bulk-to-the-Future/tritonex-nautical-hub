@@ -1,5 +1,5 @@
 import { Factory, Ruler, Warehouse, Hourglass } from "lucide-react";
-import facilitiesImage from "@/assets/facilities.jpg";
+import facilitiesImage from "@/assets/mangalore-map.webp";
 
 const Facilities = () => {
   const facilities = [
