@@ -40,7 +40,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {/* Contact Cards */}
             {contactInfo.map((info) => (
