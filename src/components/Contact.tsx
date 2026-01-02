@@ -1,82 +1,6 @@
-import { useState } from "react";
-import { MapPin, Phone, Mail, Send, CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { z } from "zod";
-
-const contactFormSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  company: z.string().trim().max(200, "Company must be less than 200 characters").optional().or(z.literal("")),
-  phone: z.string().trim().max(30, "Phone must be less than 30 characters").optional().or(z.literal("")),
-  service: z.string().trim().max(100, "Service must be less than 100 characters").optional().or(z.literal("")),
-  message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000, "Message must be less than 5000 characters"),
-});
+import { MapPin, Phone, Mail, CheckCircle } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    const formData = new FormData(e.currentTarget);
-    const rawData = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      company: formData.get("company") as string,
-      phone: formData.get("phone") as string,
-      service: formData.get("service") as string,
-      message: formData.get("message") as string,
-    };
-
-    const validationResult = contactFormSchema.safeParse(rawData);
-    
-    if (!validationResult.success) {
-      const firstError = validationResult.error.errors[0];
-      toast({
-        title: "Validation Error",
-        description: firstError.message,
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    const data = validationResult.data;
-
-    try {
-      const { error } = await supabase.from("contact_submissions").insert({
-        name: data.name,
-        email: data.email,
-        company: data.company || null,
-        phone: data.phone || null,
-        service: data.service || null,
-        message: data.message,
-      });
-
-      if (error) throw error;
-
-      toast({
-        title: "Message Sent",
-        description: "Thank you for contacting us. We'll respond within 24 hours.",
-      });
-      (e.target as HTMLFormElement).reset();
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   const contactInfo = [
     {
       icon: MapPin,
@@ -107,8 +31,8 @@ const Contact = () => {
             Get In Touch
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-3">
-            Let's Discuss Your{" "}
-            <span className="text-gradient">Project</span>
+            Contact{" "}
+            <span className="text-gradient">Us</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
             Ready to take your maritime operations to the next level? Contact us today
@@ -116,129 +40,15 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-card rounded-2xl p-8 shadow-elegant">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6">
-              Send Us a Message
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid md:grid-cols-2 gap-5">
-                <div>
-                  <label htmlFor="name" className="text-sm font-medium text-foreground block mb-2">
-                    Full Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    placeholder="John Doe"
-                    required
-                    className="bg-background"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="text-sm font-medium text-foreground block mb-2">
-                    Email Address
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="john@company.com"
-                    required
-                    className="bg-background"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-5">
-                <div>
-                  <label htmlFor="company" className="text-sm font-medium text-foreground block mb-2">
-                    Company
-                  </label>
-                  <Input
-                    id="company"
-                    name="company"
-                    placeholder="Your Company"
-                    className="bg-background"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="text-sm font-medium text-foreground block mb-2">
-                    Phone Number
-                  </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="+91 99999 99999"
-                    className="bg-background"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="service" className="text-sm font-medium text-foreground block mb-2">
-                  Service of Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                >
-                  <option value="">Select a service</option>
-                  <option value="shipbuilding">Turnkey Shipbuilding</option>
-                  <option value="project-management">Project Management</option>
-                  <option value="yard-modernization">Yard Modernization</option>
-                  <option value="offshore">Offshore Services</option>
-                  <option value="process">Process Improvements</option>
-                  <option value="spare-parts">Spare Parts Management</option>
-                  <option value="piping">Piping Turnkey Work</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="text-sm font-medium text-foreground block mb-2">
-                  Project Details
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell us about your project requirements..."
-                  rows={4}
-                  required
-                  className="bg-background resize-none"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full"
-                size="lg"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>Sending...</>
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="ml-2 h-4 w-4" />
-                  </>
-                )}
-              </Button>
-            </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="space-y-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
             {/* Contact Cards */}
             {contactInfo.map((info) => (
               <div
                 key={info.label}
                 className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col items-center text-center gap-4">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <info.icon className="h-5 w-5 text-accent" />
                   </div>
@@ -275,26 +85,26 @@ const Contact = () => {
                 </div>
               </div>
             ))}
+          </div>
 
-            {/* Why Choose Us */}
-            <div className="bg-primary rounded-xl p-6">
-              <h4 className="font-display text-lg font-semibold text-primary-foreground mb-4">
-                Why Partner With Us
-              </h4>
-              <ul className="space-y-3">
-                {[
-                  "24/7 dedicated project support",
-                  "Transparent pricing & reporting",
-                  "Industry-leading turnaround times",
-                  "Global quality certifications",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-primary-foreground/80">
-                    <CheckCircle className="h-4 w-4 text-ocean-light flex-shrink-0" />
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Why Choose Us */}
+          <div className="bg-primary rounded-xl p-6">
+            <h4 className="font-display text-lg font-semibold text-primary-foreground mb-4 text-center">
+              Why Partner With Us
+            </h4>
+            <ul className="grid md:grid-cols-2 gap-3">
+              {[
+                "24/7 dedicated project support",
+                "Transparent pricing & reporting",
+                "Industry-leading turnaround times",
+                "Global quality certifications",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-primary-foreground/80">
+                  <CheckCircle className="h-4 w-4 text-ocean-light flex-shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
