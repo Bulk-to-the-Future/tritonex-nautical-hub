@@ -98,8 +98,8 @@ const Contact = () => {
                 "Transparent pricing & reporting",
                 "Industry-leading turnaround times",
                 "Global quality certifications",
-              ].map((item, index) => (
-                <li key={item} className={`flex items-center gap-3 text-primary-foreground/80 ${index >= 2 ? 'md:pl-6' : ''}`}>
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-primary-foreground/80">
                   <CheckCircle className="h-4 w-4 text-ocean-light flex-shrink-0" />
                   <span className="text-sm">{item}</span>
                 </li>
