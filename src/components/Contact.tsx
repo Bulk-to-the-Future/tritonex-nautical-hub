@@ -96,12 +96,19 @@ const Contact = () => {
               {[
                 "24/7 dedicated project support",
                 "Transparent pricing & reporting",
-                "Industry-leading turnaround times",
-                "Global quality certifications",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-primary-foreground/80">
                   <CheckCircle className="h-4 w-4 text-ocean-light flex-shrink-0" />
                   <span className="text-sm">{item}</span>
+                </li>
+              ))}
+              {[
+                "Industry-leading turnaround times",
+                "Global quality certifications",
+              ].map((item) => (
+                <li key={item} className="flex items-center justify-end gap-3 text-primary-foreground/80 text-right">
+                  <span className="text-sm">{item}</span>
+                  <CheckCircle className="h-4 w-4 text-ocean-light flex-shrink-0" />
                 </li>
               ))}
             </ul>
