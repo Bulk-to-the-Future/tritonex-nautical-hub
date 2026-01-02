@@ -5,6 +5,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+
+const contactFormSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  company: z.string().trim().max(200, "Company must be less than 200 characters").optional().or(z.literal("")),
+  phone: z.string().trim().max(30, "Phone must be less than 30 characters").optional().or(z.literal("")),
+  service: z.string().trim().max(100, "Service must be less than 100 characters").optional().or(z.literal("")),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(5000, "Message must be less than 5000 characters"),
+});
 
 const Contact = () => {
   const { toast } = useToast();
@@ -15,21 +25,38 @@ const Contact = () => {
     setIsSubmitting(true);
     
     const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const company = formData.get("company") as string;
-    const phone = formData.get("phone") as string;
-    const service = formData.get("service") as string;
-    const message = formData.get("message") as string;
+    const rawData = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      company: formData.get("company") as string,
+      phone: formData.get("phone") as string,
+      service: formData.get("service") as string,
+      message: formData.get("message") as string,
+    };
+
+    const validationResult = contactFormSchema.safeParse(rawData);
+    
+    if (!validationResult.success) {
+      const firstError = validationResult.error.errors[0];
+      toast({
+        title: "Validation Error",
+        description: firstError.message,
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    const data = validationResult.data;
 
     try {
       const { error } = await supabase.from("contact_submissions").insert({
-        name: name.trim(),
-        email: email.trim(),
-        company: company?.trim() || null,
-        phone: phone?.trim() || null,
-        service: service || null,
-        message: message.trim(),
+        name: data.name,
+        email: data.email,
+        company: data.company || null,
+        phone: data.phone || null,
+        service: data.service || null,
+        message: data.message,
       });
 
       if (error) throw error;
@@ -40,7 +67,6 @@ const Contact = () => {
       });
       (e.target as HTMLFormElement).reset();
     } catch (error) {
-      console.error("Error submitting form:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
