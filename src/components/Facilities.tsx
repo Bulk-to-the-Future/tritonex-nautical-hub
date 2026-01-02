@@ -60,7 +60,7 @@ const Facilities = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/40 to-transparent" />
 
             {/* Overlay Badge */}
-            <div className="absolute bottom-6 left-6 bg-card/90 backdrop-blur-sm rounded-lg p-4 shadow-elegant">
+            <div className="absolute top-6 left-6 bg-card/90 backdrop-blur-sm rounded-lg p-4 shadow-elegant">
               <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Located In</div>
               <div className="font-display font-semibold text-foreground">Mangaluru, India</div>
             </div>
