@@ -99,7 +99,7 @@ const Contact = () => {
                 "Industry-leading turnaround times",
                 "Global quality certifications",
               ].map((item, index) => (
-                <li key={item} className={`flex items-center gap-3 text-primary-foreground/80 ${index % 2 === 1 ? 'md:pl-12' : ''}`}>
+                <li key={item} className={`flex items-center gap-3 text-primary-foreground/80 ${index % 2 === 1 ? 'md:pl-24' : ''}`}>
                   <CheckCircle className="h-4 w-4 text-ocean-light flex-shrink-0" />
                   <span className="text-sm">{item}</span>
                 </li>
