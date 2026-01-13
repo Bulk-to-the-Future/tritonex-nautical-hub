@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center flex-1 flex items-center">
         <div className="max-w-4xl mx-auto">
           {/* Headline */}
-          <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0 animation-delay-100">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 mt-8 md:mt-12 animate-fade-up opacity-0 animation-delay-100">
             Engineering Excellence <span className="block text-ocean-light">for the Maritime Industry</span>
           </h1>
 
